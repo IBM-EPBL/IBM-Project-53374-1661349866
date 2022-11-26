@@ -1,0 +1,507 @@
+HOME.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimal-scale=1.0">
+    <title>Home</title>
+    <!-- form awesome library for adding icons to the form -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" href="static/style.css" type="text/css">
+</head>
+<body background="2.gif">
+    <div class="login">
+        <!--
+        <h2><a href="/dashboard">Dashboard</a></h2>
+        <h2><a href="/info">User Info</a></h2>
+        -->
+        <form action="dashboard.html" method="post">
+
+
+
+
+
+
+
+            
+            <label for="dashboard">
+                <h2 class="fas fa-chart-line"></h2>
+            </label>
+            <!--
+            -->
+            <input type="submit" value="dashboard">
+        </form>
+    </div>
+    <div class="info">
+        <form action="info.html" method="post">
+            <label for="info">
+                <h2 class="fas fa-info"></h2>
+            </label>
+            <!--
+            -->
+            <input type="submit" value="info">
+        </form>
+        <div class="login">
+            <form action="login.html" method="post">
+                <label for="login">
+                    <h2 class="fas fa-info"></h2>
+                </label>
+                <!--
+                -->
+                <input type="submit" value="login">
+            </form>
+    </div>
+    
+</body>
+</html>
+
+INFO.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimal-scale=1.0">
+    <title>Info</title>
+    <!-- form awesome library for adding icons to the form -->
+    <!--
+    -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+        <link rel="stylesheet" href="style3.css" type="text/css">
+    <style>
+        body {
+            background-image: url("2.gif");
+            background-color: #435165;
+        }
+        div{
+            background-color: white;
+            width: fit-content;
+            border: 10% solid black;
+        }
+        @media (max-width: 480px) {
+            .boxes {
+                display: flex;
+                justify-content: center;
+                color: white;
+            }
+        }
+        /*
+        */
+        table{
+            background-color: #364639;
+            color: white;
+            width: 400px;
+        }
+        th,tr{
+            border: 2px solid black;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <h3 style="text-align: center; padding: 5px;">Welcome to the user info page</h3>
+        <p style="padding: 5px;">You can use this page to view your details available with us, and the information you used to register your account with us.</p>
+    </div>
+    <div class="boxes">
+    </div>
+
+    <div class="login">
+        <table>
+                <tr>
+                    <th>ID :<label for="text" id="fid" id="fid"></label> </th>
+                    <th>Username : </th>
+                    <th>User Email Id : </th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+        </table>
+    </div>
+    <button onclick="history.back()">Go back</button>
+</body>
+</html>
+
+LOGIN.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    <title>Login</title>
+    <!-- form awesome library for adding icons to the form -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <!-- including our stylesheet file? -->
+    <!--
+        <link rel="stylesheet" href="/static/style.css" type="text/css">
+    -->
+    <link rel="stylesheet" href="static/style.css" type="text/css">
+</head>
+<body>
+    <div class="login">
+        <h1>Login</h1>
+        <form action="auth" method="post">
+            <label for="username">
+                <!-- font awesome icon -->
+                <i class="fas fa-user"></i>
+            </label>
+            <input type="text" name="username" placeholder="Username" id="username" required>
+            <label for="password">
+                <i class="fas fa-lock"></i>
+            </label>
+            <input type="password" name="password" placeholder="Password" id="password" required>
+            <input type="submit" value="Login">
+        </form>
+    </div> 
+    <button onclick="history.back()">Go back</button>   
+</body>
+</html>
+
+STYLE.css
+
+* {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial, sans-serif;
+    font-size: 16px;
+}
+body {
+    
+    background-color: #435165;
+}
+.login {
+    width: 400px;
+    background-color: #ffffff;
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+    margin: 50px auto;
+}
+.login h1 {
+    text-align:  center;
+    color: #5b6574;
+    font-size: 24px;
+    padding: 20px 0 20px 0;
+    border-bottom: 1px solid #dee0e4;
+}
+.login form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+}
+.login form label {
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: #3274d6;
+    color: #ffffff;
+}
+.login form input[type="password"], .login form input[type="text"] {
+    width: 310px;
+    height: 50px;
+    border: 1px solid #dee0e4;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+.login form input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+   margin-top: 20px;
+    background-color: #3274d6;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    transition: background-color 0.2s;
+}
+.login form input[type="submit"]:hover {
+  background-color: #2868c7;
+    transition: background-color 0.2s;
+}
+
+
+#more {display: none;}
+.Dashboard {
+    width: 400px;
+    background-color: #ffffff;
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+    margin: 100px auto;
+}
+.Dashboard h3{
+    text-align: center;
+    color: #5b6574;
+    font-size: 24px;
+    padding: 20px 0 20px 0;
+    border-bottom: 1px solid #dee0e4;
+}
+.Dashboard form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+}
+.Dashboard form label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #3274d6;
+    color: #ffffff;
+}
+.info {
+    width: 200px;
+    background-color: #ffffff;
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+    margin: 400px auto;
+}
+.info h1 {
+    text-align: center;
+    color: #5b6574;
+    font-size: 24px;
+    padding: 20px 0 20px 0;
+    border-bottom: 1px solid #dee0e4;
+}
+.info form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+}
+.info form label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #3274d6;
+    color: #ffffff;
+}
+.info form input[type="password"], .info form input[type="text"] {
+    width: 310px;
+    height: 50px;
+    border: 1px solid #dee0e4;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+.info form input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+   margin-top: 20px;
+    background-color: #3274d6;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    transition: background-color 0.2s;
+}
+.info form input[type="submit"]:hover {
+  background-color: #2868c7;
+    transition: background-color 0.2s;
+}
+
+PYTHON
+
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+import plotly.express as px
+from datetime import datetime
+from pprint import pprint
+
+from pydrive.auth import GoogleAuth
+from pydrive.drive import GoogleDrive
+from google.colab import auth
+from oauth2client.client import GoogleCredentials
+
+path = "/content/dataset.csv"
+df = pd.read_csv(path)
+print(df)
+
+df.head()
+
+df.describe()
+
+df.info()
+
+df.isnull().sum()
+
+trips_df = pd.DataFrame()
+trips_df = temp.groupby(['start station name','end station name']).size().reset_index(name = 'Number of Trips')
+trips_df = trips_df.sort_values('Number of Trips',ascending = False)
+trips_df["start station name"] = trips_df["start station name"].astype(str)
+trips_df["end station name"] = trips_df["end station name"].astype(str)
+trips_df["Routes"] = trips_df["start station name"] + " to " + trips_df["end station name"]
+trips_df = trips_df[:50]
+trips_df = trips_df.reset_index()
+trips_df
+
+px.pie(values = temp['gender'].value_counts(),
+       names =temp['gender'].value_counts().index,
+       title ="Gender Variation")
+
+px.bar(x=temp["start station name"].value_counts().index,
+       y=temp["start station name"].value_counts().values,
+       labels={'x':'Start Station Name',"y":"Count"})
+
+px.bar(x=temp["end station name"].value_counts().index,
+       y=temp["end station name"].value_counts().values,
+       labels={'x':'End Station Name',"y":"Count"})
+
+px.bar(x=temp["Hour"].value_counts().index,
+       y=temp["Hour"].value_counts().values,
+       title = "Hour usage of Citi Bikes",
+       labels={'x':'Time',"y":"Number of people using bike"})
+
+--------------------------------------------------------------------------------------
+
+# index.js
+
+const mysql = require('mysql');
+const express = require('express');
+const session = require('express-session');
+const path = require('path');
+const { dirname } = require('path');
+const { request } = require('express');
+
+// Requiring dotenv and Creating variables to store the Env values to maintain a bit of secrecy
+require("dotenv").config()
+const DB_HOST = process.env.DB_HOST
+const DB_USER = process.env.DB_USER
+const DB_PASSWORD = process.env.DB_PASSWORD
+const DB_DATABASE = process.env.DB_DATABASE
+
+const connection = mysql.createConnection({
+    host: DB_HOST,
+    user: DB_USER,
+    password: DB_PASSWORD,
+    database: DB_DATABASE
+});
+
+// Creating an express application
+const app = express();
+
+// storing the value of username for further displaying the respective user's info
+let uname = '';
+
+// setting the view engine to ejs -> as I wanted to render the user info dynamically, and have it viewed through an engine [This was the only possible way to render / pass values to HTML]
+app.set('view engine', 'ejs');
+
+app.use(session({
+    secret: 'secret',
+    resave: true,
+saveUninitialized: true
+}));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, 'static')));
+
+// http://localhost:3000/
+app.get('/', function(request, response) {
+    // Render login template
+response.sendFile(path.join(__dirname + '/login.html'))
+})
+
+// http://localhost:3000/auth
+app.post('/auth', function(request, response) {
+    // Capture the input fields
+    let username = request.body.username;
+uname = username;
+    let password = request.body.password;
+    // Ensure the input fields exist and are not empty
+    if (username && password) {
+        // Execute SQL query that'll select the account from the database based on the specified username and password
+connection.query('SELECT * FROM accounts WHERE username = ? AND password = ?',[username, password], function(error,results,fields){
+            // If there is an issue with the  query, output the error
+            if (error) throw error;
+            // If the account exists
+            if (results.length> 0) {
+                // Authenticate the user
+request.session.loggedin = true;
+request.session.username = username;
+                // Redirect to home page
+response.redirect('/home');
+            } else {
+response.send('Incorrect Username and/or Password!');
+response.end();
+            }
+        });
+    } else {
+response.send('Please enter Username and Password!');
+response.end();
+    }
+});
+
+// http://localhost:3000/home
+app.get('/home', function(request, response) {
+    // If the user is loggedin
+    if (request.session.loggedin) {
+        // Creating a home page for the users to be welcomed.
+response.sendFile(path.join(__dirname + '/home.html'));
+        // // Output username
+        // response.send('Welcome back, ' + request.session.username + '!');
+    } else {
+        // Not logged in
+response.send('Please login to view this page!');
+    }
+    //response.end();
+    // Uncommenting this usually led me to have errors regarding 'Can't set headers after they are sent' -> so it meant that responses were closed, and communication wasn't possible after that ?
+});
+
+// http://localhost:3000/dashboard
+app.post('/dashboard', function(request, response) {
+    // Return the dashboard for the user if he is logged in.
+    if (request.session.loggedin) {
+        // // Return the dashboard to be viewed for the user.
+        // response.sendFile(path.join(__dirname + '/dashboard.html'));
+        // Instead of sending the path and hence thereby opening the html file, we can instead render an ejs file, using the ejs view engine.
+response.render('dashboard');
+    } else {
+        // Not logged in
+response.send('Please login to view this page!');
+    }
+    //response.end();
+});
+
+// http://localhost:3000/info
+app.post('/info', function(request, response) {
+    // Return the dashboard for the user if he is logged in.
+    if (request.session.loggedin) {
+        // // Return the dashboard to be viewed for the user.
+        // response.sendFile(path.join(__dirname + '/info.html'));
+        // Instead of sending the file and it's path, to be displayed when accessing this route, we can actually pass the sql values as parameters to the view engine, to print them out, dynamically corresponding to the data available from the sql database.
+        // response.render('info', { rinzler: 'Hello Tron!'});
+        // console.log(uname);
+connection.query('SELECT id,username,email FROM accounts WHERE username = ?',[uname], function(error,results,fields){
+            // Output error if there is some kind of problem with the query
+            if (error) throw error;
+            // If the account exists then perform the operations associated with it!
+            else {
+                // console.log(results);
+                // // This basically stores all the resulting row's fields in it.
+                // // In the following steps, we have toseperate the different fields (4 of them) and just show only the three fields to the user.
+                // // Also try to change the query so that only the three non-private fields are sent back as a result
+                // console.log("Id is : ",results[0].id);
+                // console.log("Username is : ",results[0].username);
+                // console.log("Email is : ",results[0].email);
+response.render('info', { id: results[0].id, name: results[0].username, mail: results[0].email})
+            }
+        })
+    } else {
+        // Not logged in
+response.send('Please login to view this page!');
+    }
+    //response.end();
+});
+
+// Add a port to enable the nodejs server to listen to incoming connections
+// Ideally when we want to deploy our login system to a production server, we want to listen on port `80` so that we don't have to specify the port number in the URL.
+app.listen(3000);
